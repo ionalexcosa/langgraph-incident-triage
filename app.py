@@ -154,7 +154,7 @@ def approval_gate(state: IncidentState):
 
 
 def approval_route(state: IncidentState) -> Literal["publish_runbook", "reject_runbook"]:
-    return "publish_runbook" if state["decision"] else "reject_runbook"\
+    return "publish_runbook" if state["decision"] else "reject_runbook"
 
 def publish_runbook(state: IncidentState):
     RUNBOOK_DIR.mkdir(exist_ok=True)
